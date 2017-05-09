@@ -4,6 +4,9 @@ include('lib/Producto.php');
 $oProducto=new Producto();
 
 $oProducto->nombre='Nuevo Producto';
+$oProducto->codigo='001';
+
+$aProductos[]
 ?>
 <!DOCTYPE html>
 
@@ -14,7 +17,7 @@ $oProducto->nombre='Nuevo Producto';
     </head>
     <body>
         <?php
-            echo $oProducto->nombre;
+            echo $oProducto->codigo." ".$oProducto->nombre;
         
         
         ?>
