@@ -1,12 +1,18 @@
 <?php
 include('lib/Producto.php');
 
-$oProducto=new Producto();
+$oProducto1=new Producto();
+$oProducto1->nombre='Nuevo Producto 1';
+$oProducto1->codigo='001';
 
-$oProducto->nombre='Nuevo Producto';
-$oProducto->codigo='001';
+$oProducto2=new Producto("Nuevo producto 002",0,"002");
+$oProducto3=new Producto("Nuevo producto 003",0,"003");
 
-$aProductos[]
+$aProductos[0]=$oProducto1;
+$aProductos[1]=$oProducto2;
+$aProductos[2]=$oProducto3;
+
+
 ?>
 <!DOCTYPE html>
 
@@ -17,8 +23,11 @@ $aProductos[]
     </head>
     <body>
         <?php
-            echo $oProducto->codigo." ".$oProducto->nombre;
-        
+        foreach ($aProductos as $oPro){
+            echo $oPro->codigo." ".$oPro->nombre;
+            echo "<br>";
+            
+        }
         
         ?>
     </body>
